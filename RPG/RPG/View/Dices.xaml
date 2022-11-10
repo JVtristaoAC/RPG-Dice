@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPG.View.Dices"
+             BackgroundColor="#171717">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#d22a46" HeightRequest="100">
+                <Label Text="RPG Dices" FontSize="Title" Margin="0,50,0,0" TextColor="GhostWhite" HorizontalOptions="Center"/>
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="d4.png" x:Name="d4" Clicked="d4_Clicked" 
+                             Grid.Column="0" Grid.Row="0"
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d4" Grid.Column="0" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+
+                <ImageButton Source="d6.png" x:Name="d6" Clicked="d6_Clicked" 
+                             Grid.Column="1" Grid.Row="0" 
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d6" Grid.Column="1" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+                
+                <ImageButton Source="d8.png" x:Name="d8" Clicked="d8_Clicked" 
+                             Grid.Column="2" Grid.Row="0"
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d8" Grid.Column="2" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+                
+                <ImageButton Source="d10.png" x:Name="d10" Clicked="d10_Clicked"
+                             Grid.Column="0" Grid.Row="1" 
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d10" Grid.Column="0" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+                
+                <ImageButton Source="d12.png" x:Name="d12" Clicked="d12_Clicked" 
+                             Grid.Column="1" Grid.Row="1" 
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d12" Grid.Column="1" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+                
+                <ImageButton Source="d20.png" x:Name="d20" Clicked="d20_Clicked" 
+                             Grid.Column="2" Grid.Row="1" 
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d20" Grid.Column="2" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
