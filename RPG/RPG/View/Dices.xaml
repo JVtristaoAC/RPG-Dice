@@ -56,7 +56,28 @@
                              Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
                              HeightRequest="90"/>
                 <Label Text="d20" Grid.Column="2" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+
+                <ImageButton Source="d100.png" x:Name="d100" Clicked="d100_Clicked" 
+                             Grid.Column="0" Grid.Row="2" CornerRadius="5"
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d100" Grid.Column="0" Grid.Row="2" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+
+                <ImageButton Source="random.png" x:Name="btn_d" Clicked="d_Clicked"
+                             Grid.Column="1" Grid.Row="2" CornerRadius="5"
+                             Margin="10" VerticalOptions="Center" HorizontalOptions="Center"
+                             HeightRequest="90"/>
+                <Label Text="d300" TextColor="#9f1f35" Grid.Column="1" Grid.Row="2" x:Name="lbl_d" VerticalOptions="End" HorizontalOptions="Center" FontSize="Medium"/>
+
+
+                <Entry  Grid.Column="0" Grid.Row="4"  Grid.ColumnSpan="2" Keyboard="Numeric"
+                        x:Name="ent_custom" Placeholder="300" PlaceholderColor="#9f1f35" 
+                        VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
                 
+                <Button Text="Refresh" x:Name="btn_Refresh"  Clicked="btn_Refresh_Clicked"
+                        Grid.Column="2" Grid.Row="4" 
+                        Margin="0,60,0,0" BackgroundColor="#d22a46"/>
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
