@@ -14,13 +14,13 @@ namespace RPG.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Dices : ContentPage
     {
-
+        int? i = 300;
         Random random = new Random();
         public Dices()
         {
             
             InitializeComponent();
-             
+                 
         }
 
         private void d4_Clicked(object sender, EventArgs e)
@@ -67,29 +67,31 @@ namespace RPG.View
 
          private void d_Clicked(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(ent_custom.Text))
+            if (i != null)
             {
                 try
                 {
-                    int i = Convert.ToInt32(ent_custom.Text);                  
-                    DisplayAlert(random.Next(1, i++).ToString(), "", "OK");
+                              
+                    DisplayAlert(random.Next(1, (int)i+1).ToString(), "", "OK");
                     
                 }
                 catch
                 {
-                    DisplayAlert("ERRO", "Numero inválido", "OK");
+                    DisplayAlert("Error", "Invalid Number", "OK");
                 }
                 
                                
                
             }
-            
+
             
         }
 
         private void btn_Refresh_Clicked(object sender, EventArgs e)
         {
+            i = Convert.ToInt32(ent_custom.Text);
             lbl_d.Text = "d" + ent_custom.Text;
+            ent_custom.Placeholder = ent_custom.Text;
         }
     }
 }
